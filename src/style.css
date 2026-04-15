@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-md border border-white/10;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:from-primary-600 hover:to-primary-700 hover:scale-105 hover:shadow-lg hover:shadow-primary-500/25;
+  }
+  
+  .btn-secondary {
+    @apply glass text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-white/20 hover:scale-105;
+  }
+  
+  .card {
+    @apply glass rounded-2xl p-6 transition-all duration-300 hover:bg-white/15 hover:scale-105 hover:shadow-xl;
+  }
+  
+  .section-padding {
+    @apply py-20 px-6;
+  }
+  
+  .container-custom {
+    @apply container mx-auto max-w-6xl;
+  }
+}
+
